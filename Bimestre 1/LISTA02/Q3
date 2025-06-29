@@ -1,0 +1,48 @@
+# Escreva um programa para ler dois números inteiros e mostrar na tela o maior deles,
+# bem como a diferença entre eles (a diferença é sempre um valor positivo)
+.text
+
+main:	addi $2,$0,5
+	syscall
+	add $8,$0,$2 #n1
+	
+	addi $2,$0,5
+	syscall
+	add $9,$0,$2 #n2
+	
+	slt $10,$8,$9 #se 8 for menor que 9, 10 = 1, senao, 10 = 0
+	
+	beq $10,1,n2maior
+	
+	add $4,$0,$8
+	add $2,$0,1 #processo maior que
+	syscall
+	
+	add $4,$0,'\n'
+	add $2,$0,11
+	syscall
+	
+	sub $20,$8,$9
+	add $4,$0,$20
+	add $2,$0,1 #diferença
+	syscall
+	
+	j fim
+	
+n2maior:	add $4,$0,$9
+	add $2,$0,$1
+	syscall
+	
+	add $4,$0,'\n'
+	add $2,$0,11
+	syscall
+	
+	sub $20,$9,$8
+	add $4,$0,$20
+	add $2,$0,1 #diferença
+	syscall
+	
+fim:
+	add $2,$0,10
+	syscall
+	

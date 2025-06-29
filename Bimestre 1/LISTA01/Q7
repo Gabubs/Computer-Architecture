@@ -1,0 +1,31 @@
+# Faça um programa que leia um número entre 0 e 9999 e imprima cada algarismo em
+# uma linha diferente.
+.text
+main:
+
+ #horas
+ addi $2,$0,5
+ syscall
+ add $8,$0,$2 
+ 
+ #min
+ addi $2,$0,5
+ syscall
+ add $9,$0,$2
+
+ #sec
+ addi $2,$0,5
+ syscall
+ add $10,$0,$2 
+  
+  mul $20,$8,3600
+  
+  mul $21,$9, 60
+  
+  add $22,$10,$20
+  add $22,$22,$21
+
+  addi $2,$0,1  
+  add $4,$0,$22
+  syscall
+  

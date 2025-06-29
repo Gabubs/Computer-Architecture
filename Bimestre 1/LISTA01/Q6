@@ -1,0 +1,25 @@
+.text
+#Questão 6
+
+ add $2,$0,5 #input
+ syscall
+ add $8,$0,$2
+ 
+ div $9,$8,100
+ mfhi $10
+ div $11,$10,10
+ mfhi $12
+ 
+ # 1°=9,2°=11,3°=12
+ # primeiro Algarismo
+ add $4,$0,$9
+ add $2,$0,1
+ syscall
+ # segundo algarismo
+ add $4,$0,$11
+ add $2,$0,1
+ syscall
+ #terceiro algarismo
+ add $4,$0,$12
+ add $2,$0,1
+ syscall

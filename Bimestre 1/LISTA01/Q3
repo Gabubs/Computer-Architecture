@@ -1,0 +1,19 @@
+.text
+#Questão 3
+main:
+	addi $2,$0,5
+	syscall
+	
+	add $3,$0,$2
+	
+	addi $2,$0,5
+	syscall
+	
+	add $6,$0,$2
+	
+	mul $4,$3,$6
+	
+	add $2,$0,1
+	syscall
+	add $5,$0,$4
+	
