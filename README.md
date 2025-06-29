@@ -1,2 +1,2 @@
-My Computer Architecture material
+My Computer Architecture material.
 all the material is in Assembly
